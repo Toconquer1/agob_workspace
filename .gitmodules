@@ -1,3 +1,6 @@
 [submodule "skills"]
 	path = skills
 	url = git@github.com:Toconquer1/my_custom_skill.git
+[submodule "agent-observer"]
+	path = agent-observer
+	url = git@github.com:Toconquer1/agent-observer.git
