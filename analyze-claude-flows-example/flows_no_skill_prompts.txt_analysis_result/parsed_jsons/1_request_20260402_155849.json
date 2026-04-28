@@ -1,0 +1,192 @@
+{
+    "request_body": {
+        "model": "glm-5",
+        "messages": [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "<system-reminder>\nThe following skills are available for use with the Skill tool:\n\n- simplify: Review changed code for reuse, quality, and efficiency, then fix any issues found.\n- loop: Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo, defaults to 10m) - When the user wants to set up a recurring task, poll for status, or run something repeatedly on an interval (e.g. \"check the deploy every 5 minutes\", \"keep running /babysit-prs\"). Do NOT invoke for one-off tasks.\n- claude-api: Build apps with the Claude API or Anthropic SDK.\nTRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK.\nDO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.\n- paper-assistant: LaTeX academic paper writing assistant with content optimization, revision tracking, BibTeX management, writing suggestions, and suggestion application\n- calc-factorial: 计算给定数字的阶乘。当用户询问某个数字的阶乘，或直接通过 /calc-factorial 调用时使用此技能。\n</system-reminder>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<system-reminder>\nThe user opened the file c:\\Users\\zz1\\master_code\\test_claude_code\\.claude\\skills\\calc-factorial\\scripts\\factorial.py in the IDE. This may or may not be related to the current task.\n</system-reminder>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<system-reminder>\nAs you answer the user's questions, you can use the following context:\n# currentDate\nToday's date is 2026-04-02.\n\n      IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.\n</system-reminder>\n"
+                    },
+                    {
+                        "type": "text",
+                        "text": "计算10的阶乘",
+                        "cache_control": {
+                            "type": "ephemeral"
+                        }
+                    }
+                ]
+            }
+        ],
+        "system": [
+            {
+                "type": "text",
+                "text": "[A]"
+            },
+            {
+                "type": "text",
+                "text": "[B]",
+                "cache_control": {
+                    "type": "ephemeral"
+                }
+            },
+            {
+                "type": "text",
+                "text": "[C]",
+                "cache_control": {
+                    "type": "ephemeral"
+                }
+            }
+        ],
+        "tools": [
+            {
+                "name": "Agent",
+                "extracted": true
+            },
+            {
+                "name": "TaskOutput",
+                "extracted": true
+            },
+            {
+                "name": "Bash",
+                "extracted": true
+            },
+            {
+                "name": "Glob",
+                "extracted": true
+            },
+            {
+                "name": "Grep",
+                "extracted": true
+            },
+            {
+                "name": "ExitPlanMode",
+                "extracted": true
+            },
+            {
+                "name": "Read",
+                "extracted": true
+            },
+            {
+                "name": "Edit",
+                "extracted": true
+            },
+            {
+                "name": "Write",
+                "extracted": true
+            },
+            {
+                "name": "NotebookEdit",
+                "extracted": true
+            },
+            {
+                "name": "WebFetch",
+                "extracted": true
+            },
+            {
+                "name": "WebSearch",
+                "extracted": true
+            },
+            {
+                "name": "TaskStop",
+                "extracted": true
+            },
+            {
+                "name": "AskUserQuestion",
+                "extracted": true
+            },
+            {
+                "name": "Skill",
+                "extracted": true
+            },
+            {
+                "name": "EnterPlanMode",
+                "extracted": true
+            },
+            {
+                "name": "TaskCreate",
+                "extracted": true
+            },
+            {
+                "name": "TaskGet",
+                "extracted": true
+            },
+            {
+                "name": "TaskUpdate",
+                "extracted": true
+            },
+            {
+                "name": "TaskList",
+                "extracted": true
+            },
+            {
+                "name": "EnterWorktree",
+                "extracted": true
+            },
+            {
+                "name": "ExitWorktree",
+                "extracted": true
+            },
+            {
+                "name": "CronCreate",
+                "extracted": true
+            },
+            {
+                "name": "CronDelete",
+                "extracted": true
+            },
+            {
+                "name": "CronList",
+                "extracted": true
+            },
+            {
+                "name": "mcp__ide__getDiagnostics",
+                "extracted": true
+            },
+            {
+                "name": "mcp__ide__executeCode",
+                "extracted": true
+            },
+            {
+                "name": "mcp__web-search-prime__web_search_prime",
+                "extracted": true
+            },
+            {
+                "name": "mcp__web-reader__webReader",
+                "extracted": true
+            },
+            {
+                "name": "mcp__zread__search_doc",
+                "extracted": true
+            },
+            {
+                "name": "mcp__zread__read_file",
+                "extracted": true
+            },
+            {
+                "name": "mcp__zread__get_repo_structure",
+                "extracted": true
+            }
+        ],
+        "metadata": {
+            "user_id": "user_66f700ae89f1e8ad634df6315e56140547e801198de358c8b3f676da7362909b_account__session_bc70db31-6bef-4a8e-87ab-62013f157a72"
+        },
+        "max_tokens": 32000,
+        "thinking": {
+            "type": "adaptive"
+        },
+        "output_config": {
+            "effort": "medium"
+        },
+        "stream": true
+    }
+}

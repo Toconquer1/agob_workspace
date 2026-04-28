@@ -1,0 +1,3 @@
+[submodule "skills"]
+	path = skills
+	url = git@github.com:Toconquer1/my_custom_skill.git

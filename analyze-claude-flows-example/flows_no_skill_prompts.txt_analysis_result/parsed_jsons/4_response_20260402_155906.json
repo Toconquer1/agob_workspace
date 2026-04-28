@@ -1,0 +1,18 @@
+{
+    "response_body": {
+        "is_sse_stream": true,
+        "integrated_thinking": "The user asked to calculate the factorial of 10, which has been completed successfully. The result was 3,628,800.\n\nWhat would the user naturally type next? Let me think about common follow-ups:\n- They might want to calculate another factorial\n- They might want to see the log file\n- They might be done and want to do something else\n\nLooking at the conversation, this was a simple one-off calculation task. The user might:\n1. Want to calculate another number's factorial\n2. Be done\n\nGiven this is a simple calculation task that's complete, there's no obvious next step. The user might want to calculate another factorial, but that's not a guaranteed follow-up.\n\nI should stay silent or suggest something very natural. Given they just calculated 10!, they might want to:\n- Calculate another factorial like 5! or 20!\n- Check the log file\n\nBut these aren't obvious follow-ups. The task is complete. I'll suggest something minimal or stay silent.\n\nActually, a natural follow-up might be to calculate another number. Something like \"计算5的阶乘\" (calculate 5 factorial) or similar. But that's speculative.\n\nI think staying silent is appropriate here since the task is complete and there's no obvious next step.",
+        "integrated_text": "计算20的阶乘",
+        "tool_calls": [],
+        "usage": {
+            "input_tokens": 343,
+            "output_tokens": 269,
+            "cache_read_input_tokens": 21248,
+            "server_tool_use": {
+                "web_search_requests": 0
+            },
+            "service_tier": "standard"
+        },
+        "stop_reason": "end_turn"
+    }
+}

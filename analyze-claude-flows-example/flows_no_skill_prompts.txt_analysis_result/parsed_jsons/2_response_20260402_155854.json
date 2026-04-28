@@ -1,0 +1,27 @@
+{
+    "response_body": {
+        "is_sse_stream": true,
+        "integrated_thinking": "用户想要计算10的阶乘。我需要运行技能提供的 Python 脚本来计算。让我执行这个命令，传入数字10作为参数。",
+        "integrated_text": "",
+        "tool_calls": [
+            {
+                "id": "call_ddfeedc8522848a29162ecb2",
+                "name": "Bash",
+                "arguments": {
+                    "command": "conda run -n base python \"C:/Users/zz1/master_code/test_claude_code/.claude/skills/calc-factorial/scripts/factorial.py\" \"10\"",
+                    "description": "计算10的阶乘"
+                }
+            }
+        ],
+        "usage": {
+            "input_tokens": 178,
+            "output_tokens": 90,
+            "cache_read_input_tokens": 20928,
+            "server_tool_use": {
+                "web_search_requests": 0
+            },
+            "service_tier": "standard"
+        },
+        "stop_reason": "tool_use"
+    }
+}

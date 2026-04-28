@@ -1,0 +1,209 @@
+{
+    "request_body": {
+        "model": "glm-5",
+        "messages": [
+            {
+                "role": "history_placeholder",
+                "content": "[History origin: Request 1, Msg 0]"
+            },
+            {
+                "role": "history_placeholder",
+                "content": "[History origin: Request 2, Msg 1]"
+            },
+            {
+                "role": "history_placeholder",
+                "content": "[History origin: Request 2, Msg 2]"
+            },
+            {
+                "role": "history_placeholder",
+                "content": "[History origin: Request 3, Msg 3]"
+            },
+            {
+                "role": "history_placeholder",
+                "content": "[History origin: Request 3, Msg 4]"
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "thinking",
+                        "thinking": "计算完成了。10的阶乘是 3628800。",
+                        "signature": ""
+                    },
+                    {
+                        "type": "text",
+                        "text": "**10的阶乘结果是：3,628,800**\n\n计算公式：10! = 10 × 9 × 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 3,628,800",
+                        "cache_control": {
+                            "type": "ephemeral"
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "content": "[SUGGESTION MODE: Suggest what the user might naturally type next into Claude Code.]\n\nFIRST: Look at the user's recent messages and original request.\n\nYour job is to predict what THEY would type - not what you think they should do.\n\nTHE TEST: Would they think \"I was just about to type that\"?\n\nEXAMPLES:\nUser asked \"fix the bug and run tests\", bug is fixed → \"run the tests\"\nAfter code written → \"try it out\"\nClaude offers options → suggest the one the user would likely pick, based on conversation\nClaude asks to continue → \"yes\" or \"go ahead\"\nTask complete, obvious follow-up → \"commit this\" or \"push it\"\nAfter error or misunderstanding → silence (let them assess/correct)\n\nBe specific: \"run the tests\" beats \"continue\".\n\nNEVER SUGGEST:\n- Evaluative (\"looks good\", \"thanks\")\n- Questions (\"what about...?\")\n- Claude-voice (\"Let me...\", \"I'll...\", \"Here's...\")\n- New ideas they didn't ask about\n- Multiple sentences\n\nStay silent if the next step isn't obvious from what the user said.\n\nFormat: 2-12 words, match the user's style. Or nothing.\n\nReply with ONLY the suggestion, no quotes or explanation."
+            }
+        ],
+        "system": [
+            {
+                "type": "text",
+                "text": "[A]"
+            },
+            {
+                "type": "text",
+                "text": "[B]",
+                "cache_control": {
+                    "type": "ephemeral"
+                }
+            },
+            {
+                "type": "text",
+                "text": "[C]",
+                "cache_control": {
+                    "type": "ephemeral"
+                }
+            }
+        ],
+        "tools": [
+            {
+                "name": "Agent",
+                "extracted": true
+            },
+            {
+                "name": "TaskOutput",
+                "extracted": true
+            },
+            {
+                "name": "Bash",
+                "extracted": true
+            },
+            {
+                "name": "Glob",
+                "extracted": true
+            },
+            {
+                "name": "Grep",
+                "extracted": true
+            },
+            {
+                "name": "ExitPlanMode",
+                "extracted": true
+            },
+            {
+                "name": "Read",
+                "extracted": true
+            },
+            {
+                "name": "Edit",
+                "extracted": true
+            },
+            {
+                "name": "Write",
+                "extracted": true
+            },
+            {
+                "name": "NotebookEdit",
+                "extracted": true
+            },
+            {
+                "name": "WebFetch",
+                "extracted": true
+            },
+            {
+                "name": "WebSearch",
+                "extracted": true
+            },
+            {
+                "name": "TaskStop",
+                "extracted": true
+            },
+            {
+                "name": "AskUserQuestion",
+                "extracted": true
+            },
+            {
+                "name": "Skill",
+                "extracted": true
+            },
+            {
+                "name": "EnterPlanMode",
+                "extracted": true
+            },
+            {
+                "name": "TaskCreate",
+                "extracted": true
+            },
+            {
+                "name": "TaskGet",
+                "extracted": true
+            },
+            {
+                "name": "TaskUpdate",
+                "extracted": true
+            },
+            {
+                "name": "TaskList",
+                "extracted": true
+            },
+            {
+                "name": "EnterWorktree",
+                "extracted": true
+            },
+            {
+                "name": "ExitWorktree",
+                "extracted": true
+            },
+            {
+                "name": "CronCreate",
+                "extracted": true
+            },
+            {
+                "name": "CronDelete",
+                "extracted": true
+            },
+            {
+                "name": "CronList",
+                "extracted": true
+            },
+            {
+                "name": "mcp__ide__getDiagnostics",
+                "extracted": true
+            },
+            {
+                "name": "mcp__ide__executeCode",
+                "extracted": true
+            },
+            {
+                "name": "mcp__web-search-prime__web_search_prime",
+                "extracted": true
+            },
+            {
+                "name": "mcp__web-reader__webReader",
+                "extracted": true
+            },
+            {
+                "name": "mcp__zread__search_doc",
+                "extracted": true
+            },
+            {
+                "name": "mcp__zread__read_file",
+                "extracted": true
+            },
+            {
+                "name": "mcp__zread__get_repo_structure",
+                "extracted": true
+            }
+        ],
+        "metadata": {
+            "user_id": "user_66f700ae89f1e8ad634df6315e56140547e801198de358c8b3f676da7362909b_account__session_bc70db31-6bef-4a8e-87ab-62013f157a72"
+        },
+        "max_tokens": 32000,
+        "thinking": {
+            "type": "adaptive"
+        },
+        "output_config": {
+            "effort": "medium"
+        },
+        "stream": true
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "response_body": {
+        "is_sse_stream": true,
+        "integrated_thinking": "用户想要计算10的阶乘。我看到有一个 calc-factorial 技能可用，用于计算给定数字的阶乘。我应该使用这个技能来帮助用户。",
+        "integrated_text": "",
+        "tool_calls": [
+            {
+                "id": "call_e0ac9352d61a49a2867dcf91",
+                "name": "Skill",
+                "arguments": {
+                    "skill": "calc-factorial",
+                    "args": "10"
+                }
+            }
+        ],
+        "usage": {
+            "input_tokens": 5121,
+            "output_tokens": 53,
+            "cache_read_input_tokens": 15808,
+            "server_tool_use": {
+                "web_search_requests": 0
+            },
+            "service_tier": "standard"
+        },
+        "stop_reason": "tool_use"
+    }
+}
