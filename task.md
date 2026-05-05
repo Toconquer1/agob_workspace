@@ -26,7 +26,7 @@ set SSL_CERT_FILE=~/.mitmproxy/mitmproxy-ca-cert.pem
 
 - 这个工具需要适配 windows/linux 系统，并且支持 openai/anthropic 兼容的接口
 - 这个工具本身的相关代码必须存放在 agent-observer 这个仓库当中，他最后的形式是一个 python package，打包好之后可以在任意的目录调用这个工具，将解析结果存放在当前文件夹
-- 外层目录 agob_workspace 是辅助开发 agent-observer 的目录，他只存放参考资料，或者一些测试文件夹
+- 外层目录 agob_workspace 是辅助开发 agent-observer 的目录，他只存放参考资料（如任务 md，测试 agent 使用的 skills 文件夹，以及示例的包装类 python 文件 wrap_claude.py）
 - 总体过程所说的就是这个工具的全部功能，不要加上其他的实现方法
 
 # 开发方法
