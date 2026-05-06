@@ -70,8 +70,10 @@ decode_mitmproxy_flow.py 是 mitm 解码脚本。输入是 mitm 文件，输出�
 simplify_prompts.py 是简化请求 json 脚本，他能够实现两个功能，1.提取多次请求中相同的系统提示词以及工具列表等信息 2. 解析相邻 json 请求中增量的内容，标记相同的已经出现过的内容
 agob_workspace\analyze-claude-flows-example\flows_no_skill_prompts.txt_analysis_result\parsed_jsons 中的结果即为这两个脚本解析后的结果文件
 
-## ！！！请你先实现到此之前的功能，接下来的两个功能，下一次迭代生成
+## 到此之前的功能已经基本实现，接下来的两个功能，下一次迭代生成
 
 ## 基于大模型的 agent 调用分析
 
 ## 结果可视化
+
+以上两个部分的详细内容参考task2.md
